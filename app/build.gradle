@@ -1,15 +1,19 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'kotlin-android-extensions'
 }
 
 android {
     namespace 'com.milovanjakovljevic.citati'
     compileSdk 32
 
+    buildFeatures {
+        viewBinding = true
+    }
     defaultConfig {
         applicationId "com.milovanjakovljevic.citati"
-        minSdk 16
+        minSdk 29
         targetSdk 32
         versionCode 1
         versionName "1.0"

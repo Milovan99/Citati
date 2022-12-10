@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import kotlinx.android.synthetic.main.recyclerview_item_row.view.*
 
 class CitatiAdapter : RecyclerView.Adapter<CitatiAdapter.CitatiViewHolder>(){
 
@@ -23,9 +24,10 @@ class CitatiAdapter : RecyclerView.Adapter<CitatiAdapter.CitatiViewHolder>(){
 
     override fun onBindViewHolder(holder: CitatiViewHolder, position: Int) {
         holder.bindCitat("Sample quote")
+
     }
 
     override fun getItemCount(): Int {
-        TODO("Not yet implemented")
+        return 10
     }
 }
