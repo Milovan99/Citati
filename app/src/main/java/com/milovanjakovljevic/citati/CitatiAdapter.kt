@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.recyclerview_item_row.view.*
 
-class CitatiAdapter : RecyclerView.Adapter<CitatiAdapter.CitatiViewHolder>(){
+class CitatiAdapter(val citati : ArrayList<String>) : RecyclerView.Adapter<CitatiAdapter.CitatiViewHolder>(){
 
     class CitatiViewHolder(v:View):RecyclerView.ViewHolder(v){
         var view:View=v
@@ -23,11 +23,12 @@ class CitatiAdapter : RecyclerView.Adapter<CitatiAdapter.CitatiViewHolder>(){
     }
 
     override fun onBindViewHolder(holder: CitatiViewHolder, position: Int) {
-        holder.bindCitat("Sample quote")
+        var citat=citati[position]
+        holder.bindCitat(citat)
 
     }
 
     override fun getItemCount(): Int {
-        return 10
+        return citati.count()
     }
 }
